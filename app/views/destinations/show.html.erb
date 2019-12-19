@@ -1,0 +1,8 @@
+<h4>Most Recet Posts:</h4>
+<ul>
+    <% @destination.most_recent.each do |post| %>
+    <li><%= link_to post.title, post_path(post) %></li>
+    <% end %>
+</ul>
+<h4>Featured Post: <%= link_to @destination.featured.title, post_path(@destination.featured) %></h4>
+<h4>Average Age of Bloggers: <%= @destination.average_age %></h4>

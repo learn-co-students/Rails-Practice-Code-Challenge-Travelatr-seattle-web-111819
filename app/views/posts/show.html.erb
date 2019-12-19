@@ -1,0 +1,5 @@
+<h1><%= @post.title %></h1>
+<h5> By: <%= link_to @post.blogger.name, blogger_path(@post.blogger) %></h5>
+<h5> Destination: <%= link_to @post.destination.name_with_country, destination_path(@post.destination) %></h5>
+<hr>
+<p><%= @post.content %></p>
