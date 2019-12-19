@@ -1,6 +1,9 @@
 <h1><%= @post.title %></h1>
 <p> By: <%= link_to @post.blogger.name, blogger_path(@post.blogger) %></p>
-<p> Destination: <%= link_to @post.destination, destination_path(@post.destination) %></p>
+<p> Destination: <%= link_to @post.destination.name, destination_path(@post.destination) %></p>
 
 <p><%= @post.content %></p>
 
+<%= @post.likes %>
+
+<%= link_to "like", like_path(@post), method: "post" %> 

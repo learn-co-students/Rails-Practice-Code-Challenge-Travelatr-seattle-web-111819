@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
-    before_action :find_post, only: [:show, :edit, :update]
+    before_action :find_post, only: [:show, :edit, :update, :likes]
 
     def show
-        
     end
 
     def new
@@ -28,6 +27,12 @@ class PostsController < ApplicationController
         else 
             render :edit 
         end 
+    end 
+
+    def likes
+        @post.likes += 1
+        @post.save 
+        redirect_to post_path(@post)  
     end 
 
 
