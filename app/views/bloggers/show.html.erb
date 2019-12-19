@@ -1,0 +1,7 @@
+<h1>Blogger: <%= @blogger.name %></h1>
+<h2>Age: <%= @blogger.age %></h2>
+<hr>
+<h4>Bio: <%= @blogger.bio %></h4>
+<h4>Total Likes: <%= @blogger.num_likes %></h4>
+<hr>
+<h4>Featured Post: <%= link_to @blogger.featured.title, post_path(@blogger.featured) %></h4>
