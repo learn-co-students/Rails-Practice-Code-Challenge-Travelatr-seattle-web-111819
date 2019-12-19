@@ -1,0 +1,9 @@
+<h1><%=@blogger.name%>'s Profile Page</h1>
+Likes: <%= @blogger.num_of_likes %><br>
+<% if @blogger.posts.exists? %>
+Featured Post: <%= link_to @featured_post.title, post_path(@featured_post) %><br>
+<% else %>
+There are no posts
+<% end %>
+Most Written About Destinations: 
+
